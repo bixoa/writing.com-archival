@@ -18,7 +18,7 @@ from session import browser
 #   Really important note here. If the chapter's descent is '1' or '0' (it is the first chapter), you must format these chapter xpaths with '1'. else, format them with '0'.
 #   This is because the first chapter doesn't have the additional div element before all content announcing which choice you just took.
 
-chapter_title_xp                = "//span[starts-with(@title, 'Created')]/span/span/text()"
+chapter_title_xp                = "//span[starts-with(@title, 'Created')]/h2/text()"
 chapter_content_xp              = ".//div[@style='padding:25px 6px 20px 11px;min-width:482px;']/div"
 chapter_member_name_xp          = "//a[starts-with(@title, 'Username:')]"
 chapter_choices_xp              = ".//div[@id='end_choices']/parent::*//a"
@@ -35,8 +35,8 @@ story_brief_description_xp = "//big/text()"
 outline_chapters_xpath = ".//*[@id='Content_Column_Inner']/div[6]/div[2]/pre//a"
 
 #For the heavy server message
-refusal_text_substring = "Please try again in a few minutes".lower()
-        
+refusal_text_substring = "or try again in a few minutes".lower()
+ 
 #For a search page
 search_results_xp=".//*[@id='Content_Column_Inner']/div[6]/font/div/div"
 search_pages_dropdown_xp = ".//*[@id='pageVal1']"
